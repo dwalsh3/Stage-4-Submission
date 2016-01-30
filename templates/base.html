@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Page based on andy's udacity page under "stage 0" as seen here: http://learn-2-code.appspot.com/code_pen_examples/#section-2 -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>{{ title }}</title> <!-- title passed in as jinja2 template parameter in main.py -->
+  <meta charset="UTF-8">
+
+</head>
+
+<body>
+  <div class="banner-image banner-text">
+    <img src="http://i.imgur.com/mPNFUAk.gif" alt="udacity parallelograms" style="width:2em">
+    <h1 class=title>Dan's Notes</h1>
+    <p class=subtitle>A programming nanodegree with Udacity</p>
+  </div>
+
+  {% include "notes.html" %}
+
+  <!-- % include "comments.html" % -->
+
+  <div style="background-color: hsl(186,42%,49%); height: .7em">
+  </div>
+ 
+  <!-- Future lesson stripes-->
+<!-- 
+  <div class=lessons-etc>
+  </div>
+  <div class='grey-background lessons-etc'>
+  </div>
+  <div class=lessons-etc>
+  </div>
+ -->
+
+</body>
+
+</html>

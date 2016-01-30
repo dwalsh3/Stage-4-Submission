@@ -1,0 +1,337 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*{
+  margin:0
+}
+
+/** {
+  outline: 1px solid red;
+}*/
+
+body {
+  font-size: 130%;
+}
+
+a:link, a:visited {
+  text-decoration: underline;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+}
+
+.banner-image {
+  max-height: 350px;
+  text-align: center;
+  background-image: url("http://i.imgur.com/W12wx3q.png");
+  background-position: bottom;
+  padding-top: 140px;
+  padding-bottom: 90px;
+  background-color: #1F404E;
+  background-size: cover;
+  margin-bottom: 0px;
+}
+
+.banner-text {
+  letter-spacing: 5px;
+  font-size: 110%;
+  color: white;
+}
+
+.title {
+  font-family: Calibri, "Arial Rounded MT Bold", Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-family: Calibri, "Arial Rounded MT Bold", Helvetica, sans-serif;
+  letter-spacing: 4px;
+}
+
+.grey-background {
+  background: #E8E8E8;
+}
+
+.lessons-etc {
+  font-family: Calibri, "Arial Rounded MT Bold", Helvetica, sans-serif;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top:30px;
+  padding-bottom: 40px;
+}
+
+.responses {
+  font-family: "Courier New";
+  font-size: .75em;
+}
+
+.ind_responses{
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #D1D1D1;
+  padding-top:    1em;
+  padding-bottom: 1em;
+}
+
+hr {
+  height: .1em;
+  color: #D1D1D1 ;
+  background-color: #D1D1D1;
+  border-color: inherit;
+  border: none;
+  margin-right: 10%;
+  margin-left:  10%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  color: #1E475C;
+  padding-top: 0.5em;
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+  color: #B7521E;
+}
+
+h4 {
+  color: #62320C;
+}
+
+p{
+  padding-bottom: 0.25em;
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #093),color-stop(0.75, #093), color-stop(0.9, #f90), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+}
+
+.gay-img {
+  max-width:49%;
+  padding: 0.7em;
+  padding-left: 0;
+}
+
+.block-quote{
+  padding: 1em 3em;
+}
+
+table.reference {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #dddddd;
+}
+.highlight {
+  padding: .5em;
+  margin-top: .7em;
+  margin-bottom: .7em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(161, 161, 161,.15);  
+  border-radius: .35em;
+  background-color: rgba(161, 161, 161,0.2);
+}
+
+.code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+  font-size: 0.85em;
+}
+
+.h_iframe iframe {
+    border:0;
+    top:0;
+    left:0;
+    width:100%;
+    height:400px;
+}
+#TABLE_1 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 209px;
+    max-width: 100%;
+    width: 708px;
+    perspective-origin: 354px 104.5px;
+    transform-origin: 354px 104.5px;
+    border: 1px solid rgb(221, 221, 221);
+    border-spacing: 0px 0px;
+    font: normal normal normal normal 14px/22px 'Open Sans', Arial, sans-serif;
+    margin: 0px 0px 20px;
+    outline: rgb(49, 49, 49) none 0px;
+}/*#TABLE_1*/
+
+#TBODY_2 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 208px;
+    width: 707px;
+    perspective-origin: 353.5px 104px;
+    transform-origin: 353.5px 104px;
+    border: 0px none rgb(221, 221, 221);
+    font: normal normal normal normal 14px/22px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+}/*#TBODY_2*/
+
+#TR_3 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 37px;
+    vertical-align: middle;
+    width: 707px;
+    perspective-origin: 353.5px 18.5px;
+    transform-origin: 353.5px 18.5px;
+    border: 0px none rgb(221, 221, 221);
+    font: normal normal normal normal 14px/22px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+}/*#TR_3*/
+
+#TH_4 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 37px;
+    text-align: left;
+    vertical-align: top;
+    width: 212px;
+    perspective-origin: 106px 18.5px;
+    transform-origin: 106px 18.5px;
+    background: rgb(238, 238, 238) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(221, 221, 221);
+    font: normal normal bold normal 14px/20px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 8px;
+}/*#TH_4*/
+
+#TH_5 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 37px;
+    text-align: left;
+    vertical-align: top;
+    width: 495px;
+    perspective-origin: 247.5px 18.5px;
+    transform-origin: 247.5px 18.5px;
+    background: rgb(238, 238, 238) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(221, 221, 221);
+    font: normal normal bold normal 14px/20px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 8px;
+}/*#TH_5*/
+
+#TR_6, #TR_11, #TR_16 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 57px;
+    vertical-align: middle;
+    width: 707px;
+    perspective-origin: 353.5px 28.5px;
+    transform-origin: 353.5px 28.5px;
+    border: 0px none rgb(221, 221, 221);
+    font: normal normal normal normal 14px/22px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+}/*#TR_6, #TR_11, #TR_16*/
+
+#TD_7, #TD_12, #TD_17 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 57px;
+    vertical-align: top;
+    width: 212px;
+    perspective-origin: 106px 28.5px;
+    transform-origin: 106px 28.5px;
+    border: 1px solid rgb(221, 221, 221);
+    font: normal normal normal normal 14px/20px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 8px;
+}/*#TD_7, #TD_12, #TD_17*/
+
+#P_8, #P_13, #P_18 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    height: 24px;
+    overflow-wrap: break-word;
+    text-align: justify;
+    width: 189.40625px;
+    word-wrap: break-word;
+    perspective-origin: 94.703125px 12px;
+    transform-origin: 94.703125px 12px;
+    font: normal normal normal normal 14px/24px 'Open Sans', Arial, sans-serif;
+    margin: 0px 2.79999995231628px 14px;
+}/*#P_8, #P_13, #P_18*/
+
+#A_9, #A_14, #A_19 {
+    background-position: 100% 50%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    overflow-wrap: break-word;
+    text-align: justify;
+    text-decoration: none;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, 0) url(http://www.tutorialspoint.com/images/link-icon.png) no-repeat scroll 100% 50% / auto padding-box border-box;
+    border: 0px none rgb(49, 49, 49);
+    font: normal normal bold normal 14px/24px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 0px 22px 2px 0px;
+}/*#A_9, #A_14, #A_19*/
+
+#TD_10, #TD_15 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 57px;
+    vertical-align: top;
+    width: 495px;
+    perspective-origin: 247.5px 28.5px;
+    transform-origin: 247.5px 28.5px;
+    border: 1px solid rgb(221, 221, 221);
+    font: normal normal normal normal 14px/20px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 8px;
+}/*#TD_10, #TD_15*/
+
+#TD_20 {
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(49, 49, 49);
+    height: 57px;
+    vertical-align: top;
+    width: 495px;
+    perspective-origin: 247.5px 28.5px;
+    transform-origin: 247.5px 28.5px;
+    border: 1px solid rgb(221, 221, 221);
+    font: normal normal normal normal 14px/20px 'Open Sans', Arial, sans-serif;
+    outline: rgb(49, 49, 49) none 0px;
+    padding: 8px;
+}/*#TD_20*/

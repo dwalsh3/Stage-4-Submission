@@ -1,0 +1,359 @@
+<div class='grey-background lessons-etc'>
+
+  <h2>Web Basics</h2>
+
+  <h3>How the Web Works</h3>
+  <p>The web is a set of computers that communicate with each other. To visit page, a computer sends an HTTP Request to a server. The server finds the appropriate HTML document and sends it back to the computer where a browser interprets the page and displays it on the screen.
+    <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/e-48329854/m-48480496">This video</a> explains it.
+  </p>
+  <h3>HTML</h3>
+  <p>HTML stands for <em>Hypertext Markup Language.</em> HTML documents form the majority of the content on the web. HTML documents contain <em>text content</em> which describes "what you see" and <em>markup</em> which describes "how it looks".
+    <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48724340"> Overview </a>
+  </p>
+  <h3>Tags and Elements</h3>
+  <p>HTML documents are made of HTML <b>elements</b>. When writing HTML, we tell browsers the type of each element by using HTML <b>tags</b>.
+    <a href="https://www.udacity.com/course/viewer#!/c-ud721/l-3508959201/m-48723444">This video</a> explains.
+  </p>
+  <h3>Why Computers are Literal</h3>
+  <p>Some people call computers stupid because they interpret instructions literally. I don't mind.
+  </p>
+  <h3>Inline vs Block Elements</h3>
+  <p>HTML elements are either <b>inline</b> or <b>block</b>. Block elements form an "invisible box" around the content inside of them.
+  </p>
+</div>
+<div class=lessons-etc>
+
+  <h2>Structure - HTML</h2>
+
+  <h3>Document Structure and the House Analogy</h3>
+  <p>The following describes the relationship between HTML and the visual structure of a page. HTML is the walls, CSS is the color of the paint, and JavaScript is the electrical system.</p>
+  <ul>
+    <li>Not all elements are visible.</li>
+    <li>All visible elements are rectangular</li>
+    <li>HTML uses a tree structure.</li>
+    <li>DOM: Document Object Model</li>
+  </ul>
+  <h3>HTML Code style</h3>
+  <p><b>Lower Case Names:</b> It's more efficient to code all classes, attributes, and tags with lower case letters because it's faster to read and faster to code:
+  </p>
+  <div class=block-quote>
+    div id="num-1" class="article" tabindex=4
+    <br> vs
+    <br> div iD="NUM-1" Class="Article" TABINDEX=4>
+  </div>
+</div>
+<div class='grey-background lessons-etc'>
+
+  <h2>Style - CSS</h2>
+
+  <h3>Linking Style to Content</h3>
+  <script src="https://gist.github.com/dwalsh3/3a4ed6ef6a44a59bb8c5.js"></script>
+  <h3>How to Display Code ^</h3>
+  <p>Showing code in a webpage takes some thought -- the browser will execute it unless it's wrapped in something, or, in this case, embedded from an external site. Github works <a href="https://gist.github.com/dwalsh3/3a4ed6ef6a44a59bb8c5#file-gistfile1-txt"> alright</a>,
+    but I'm looking forward to something with <b>syntax highlighting</b>. Also, I don't know javascript yet, so script above is a bit of a black box at this point.</p>
+
+
+  <p>If you want to do it the old fashioned way, The less than (&lt;) and greater than (&gt;) signs are special characters in HTML, denoting tags. How do we insert them as readable text? We have to use a special sequence of characters.</p>
+  <div class=block-quote>
+    <p>"& l t ;" (without spaces) will show up as &lt; </p>
+    <p>"& g t ;"(without spaces) will show up as &gt;.</p>
+  </div>
+  <h3><span class=rainbow>Gay Marriage is Now Legal in the Entire United States!</span></h3>
+  <p>It may have nothing to do with the course, but it's going in anyway. At 10am today, June 26, 2015, the Supreme Court overturned all remaining state bans on gay marriage.</p>
+  <p>Github and Stack Overflow are getting in on the excitement, so why not me?</p>
+  <img class=gay-img src="http://i.imgur.com/HDzQxZL.png" alt="gay stack overflow">
+  <img class=gay-img src="http://imgur.com/E9oe7sW.png" alt="gay github">
+  <h3>CSS Code Style</h3>
+  <p><b>One Attribute per Line:</b> For development code, it's good to have one attribute per line. We should never put more than one attribute per line to make things easier to read.</p>
+  <h3>Color Pickin'</h3>
+  <p>Here's a useful color picker I found: <a href="http://www.w3schools.com/tags/ref_colorpicker.asp">w3schools color picker </a></p>
+  <p>Another interesting tidbit I picked up while creating this page is that hex color codes can be written shorthand when they're made of three repeating pairs. #ABC is interpreted as #AABBCC.</p>
+  <h3>Don't Repeat Yourself</h3> Repeating oneself in CSS is worse than a waste of time--it's dangerous. Changing something like the body's margins should be a simple process, but if a site is designed with multiple, repetitive divs, that simple task could become long and fraught.
+  That's why I was surprised to be unable to find a parsimonious method of obtaining this page's alternating grey and white background colors. Even though the text margins stay the same throughout, each div must be full-width to allow the background
+  color extend to the screen's edge. Hmm. Now that I think about it, maybe it's possible for background color to extend past the padded box by applying negative values to the relevant parameter. Will try that next submission. For now, I'm using multiple
+  classes, one of which adds grey, for each lesson div. But even the grey seems to need the same margin parameters.*
+  <p>*And fixed. Of course it didn't need the inherited parameters.</p>
+</div>
+<div class=lessons-etc>
+
+  <h2>Udacity Code Review</h2>
+
+  <h3>Use Semantic Elements</h3>
+  <p>Via <a href="http://www.w3schools.com/html/html5_semantic_elements.asp">w3schools.com</a>.</p>
+  <br>
+  <p><span style="color:red">Still figuring what appropriate attribution looks like, worried that copying from another site like this could be infringement, reviewers please let me know!</span></p>
+  <br>
+  <p>HTML4 required developers to invent attribute names: header, top, bottom, menu, etc. The lack of strict standardization made it impossible for search engines to identify web page content.</p>
+  <p>With HTML5 elements like: &lt;header&gt; &lt;footer&gt; &lt;nav&gt; &lt;section&gt; &lt;article&gt;, this will become easier. Semantic Web "Allows data to be shared and reused across applications, enterprises, and communities."</p>
+  <h3>List of Semantic Elements in HTML5</h3>
+  <table class="reference notranslate">
+    <tbody>
+      <tr>
+        <th style="width:20%">Tag</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_article.asp">&lt;article&gt;</a></td>
+        <td>Defines an article</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_aside.asp">&lt;aside&gt;</a></td>
+        <td>Defines content aside from the page content</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_details.asp">&lt;details&gt;</a></td>
+        <td>Defines additional details that the user can view or hide</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_figcaption.asp">&lt;figcaption&gt;</a></td>
+        <td>Defines a caption for a &lt;figure&gt; element</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_figure.asp">&lt;figure&gt;</a></td>
+        <td>Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_footer.asp">&lt;footer&gt;</a></td>
+        <td>Defines a footer for a document or section</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_header.asp">&lt;header&gt;</a></td>
+        <td>Specifies a header for a document or section</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_main.asp">&lt;main&gt;</a></td>
+        <td>Specifies the main content of a document</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_mark.asp">&lt;mark&gt;</a></td>
+        <td>Defines marked/highlighted text</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_nav.asp">&lt;nav&gt;</a></td>
+        <td>Defines navigation links</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_section.asp">&lt;section&gt;</a></td>
+        <td>Defines a section in a document</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_summary.asp">&lt;summary&gt;</a></td>
+        <td>Defines a visible heading for a &lt;details&gt; element</td>
+      </tr>
+      <tr>
+        <td><a href="/tags/tag_time.asp">&lt;time&gt;</a></td>
+        <td>Defines a date/time</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <h3> Udacity Style Guide</h3>
+  <ul>
+    <li><a href="http://udacity.github.io/frontend-nanodegree-styleguide/index.html">
+    HTML Style Guide</a></li>
+    <li><a href="http://udacity.github.io/frontend-nanodegree-styleguide/css.html">
+    CSS Style Guide</a></li>
+  </ul>
+</div>
+<div class='grey-background lessons-etc'>
+
+  <h2>Yosemite Interlude</h2>
+
+  <div class="h_iframe">
+    <iframe src="http://sphereshare.net/#!/e/9cc0456d156a9de6f1603758be5f32cc"></iframe>
+  </div>
+</div>
+<div class=lessons-etc>
+
+  <h2>Programming in General </h2>
+
+  <h3>Understanding</h3>
+  <div class=highlight>
+    <p>"It has often been said that a person does not really understand something until he teaches it to someone else. Actually a person does not really understand something until after teaching it to a computer, i.e., express it as an algorithm."
+      <br>
+      <br> (Donald Knuth, in "American Mathematical Monthly," 81)</p>
+  </div>
+  <p>Programming is simply writing the steps necessary to do something in a language the computer "understands".</p>
+  <br>
+  <p><b>Sandwich Analogy:</b> We cannot write down sloppy instructions like "Spread the peanut butter on one slice and jelly on the other." We first must define "slice" or import a kitchen module, package, or library. We will have to remember to pick up
+    the knife before trying to use it to spread condiments. Picking it up would also need to be carefully defined, and so on.</p>
+  <br>
+  <h3>Basic Knowledge</h3>
+  <p>from tutorialspoint.com</p>
+  <b>Loops</b>
+  <table id="TABLE_1">
+    <tbody id="TBODY_2">
+      <tr id="TR_3">
+        <th id="TH_4">
+          Loop Type
+        </th>
+        <th id="TH_5">
+          Description
+        </th>
+      </tr>
+      <tr id="TR_6">
+        <td id="TD_7">
+          <a href="/python/python_while_loop.htm" title="WHILE loop in Python" id="A_9">while loop</a>
+        </td>
+        <td id="TD_10">
+          Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.
+        </td>
+      </tr>
+      <tr id="TR_11">
+        <td id="TD_12">
+          <a href="/python/python_for_loop.htm" title="FOR loop in Python" id="A_14">for loop</a>
+        </td>
+        <td id="TD_15">
+          Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+        </td>
+      </tr>
+      <tr id="TR_16">
+        <td id="TD_17">
+          <a href="/python/python_nested_loops.htm" title="nested loops in Python" id="A_19">nested loops</a>
+        </td>
+        <td id="TD_20">
+          You can use one or more loop inside any another while, for or do..while loop.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <b>Variables</b> 
+  <p><b>Python Lists</b> Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One difference between
+  them is that all the items belonging to a list can be of different data type. The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1.
+  The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.</p>
+  <b>Python Tuples</b>
+  are another sequence data type that are similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>
+  <p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists.</p>
+</div>
+<div class='grey-background lessons-etc'>
+
+  <h2>Python</h2>
+
+  <h3>Functions</h3>
+  <p><b>.find</b> takes one to three arguments: string to find, beginning location within string, ending location within string.
+    <br>
+  </p>
+  <p><b>object oriented programming:</b> the input to the left of ".find" is the object, and the inputs within the parenthetical are arguments or operands.
+  </p>
+  <h3>Debugging</h3>
+  <p>informal: add print statements to functions, scripts, etc.
+  </p>
+  <p>exponent operator: "**", not "^"
+  </p>
+  <p><b>if an   error thrown</b>, check the last line of error message for the specific subroutine that failed. problem is here or upstream.
+  </p>
+  <p> if error message is unhelpful, start with a working example snippet and alter it bit by bit until it crashes or succeeds
+  </p>
+  <p><b>if  no error is thrown</b>, introduce print statements that output variables as the program runs
+  </p>
+  <h3>Miscellaneous</h3>
+  <ul>
+    <li>mutation and aliasing: mutation changes an element of a list or other mutable object (some objects are immutable), while aliasing does not change the original entity</li>
+    <li>methods vs functions: .append is a method. invoke it by using object-period-method syntax</li>
+    <li>+ vs append: append is a method, + is an operator append appends a single element to the end of a list, while + operates on two lists, concatenating all individual elements into a new list</li>
+    <li>.index: LIST.index(VALUE) if VALUE is in LIST, .index returns the first position where VALUE is found in LIST, otherwise throws an error</li>
+    <li>in: VALUE in LIST: if VALUE is in LIST, returns 'True', otherwise 'False'</li>
+    <li>while loop best practices: highly recommended to first set up the structure and make sure that the count variable increases in each loop. avoids getting into infinite loops.</li>
+    <li>docstrings:
+      <br> def function(inputs)
+      <br> """this docstring will be appear as in some autocomplete dialogues"""
+      <br> return(output)
+      <li>when inputing a list of arguments for a function, split the single list into a set of individual arguments by using <code>*</code> operator, calling function(*args) rather than function(arg1, arg2, etc)
+        <div class=highlight>
+          <pre>
+  def func1(x, y, z):
+    print x
+    print y 
+    print z                 
+
+  def func2(*args):
+    # Convert args tuple to a list so we can modify it
+    args = list(args)
+    args[0] = 'Hello'
+    args[1] = 'awesome'
+    func1(*args)
+
+  func2('Goodbye', 'cruel', 'world!')
+
+  # Will print
+  # > Hello
+  # > awesome
+  # > world!</pre>
+        </div>
+        <li>"falling through" an if statements means moving to the bottom because all conditionals are false.</li>
+  </ul>
+</div>
+<div class = lessons-etc>
+
+  <h2>More Python + Google App Engine</h2>
+
+  <h3> Classes, constructors, instances </h3>
+  <ul>
+    <li><b>class</b>: a neatly packaged collection of code
+    <li><b>syntax</b>:
+      <br>module.ClassName or file.ClassName is an instance or object
+      <br>classes should be capitalized (CamelCase)
+      <br>keep class defs in one line, call them from a separate line
+    <li><b>constructor</b>: function "__init__" within a class that creates space in memory for objects/instances
+    <li><b>self:</b> keyword within __init__ and other functions that references the object being created
+    <li><b>instance variable:</b> a variable within an instance
+      <br> these can be called within the instance with self.[var] or from outside the instance/class with ClassName.[var]
+    <li><b>class variable:</b> defined at the class level rather than instance /  level, applies to all instances within a class
+    <li><b>use ALL CAPS for constants</b>
+  </ul>
+  <h3> Networking, the Internet, and Server-Side Programming </h3>
+  <ul>
+    <li><b>networking:</b> a group of distributed entities that can communicate
+    <br>
+    <br>essential building blocks include a way to encode, interpret, and route messages, along with rules about use and order preference</li>
+    <li><b>latency:</b> messages transit time in miliseconds</li>
+    <li><b>bandwith:</b> information flux in Mbps</li>
+    <li><b>protocol:</b> set of rules that allow multiple entities to transmit information simultaneously</li>
+    <li><b>URL:</b> [protocol][host][path]</li>
+    <li><b>Query parameters:</b> aka 'get parameters' [?p=1]</li>
+    <li><b>HTTP Requests</b>
+      <br>[name] [:] [space] [value]
+      header 1: Host: www.example.com
+      header 2: user-agent: chrome v1.1</li>
+    <li><b>HTTP Response></b>
+      <br>[status line] [status code] [reason phrase]
+      HTTP/1.1 200 ok  (document found)
+      HTTP/1.1 302 Found elsewhere
+      HTTP/1.1 404 Not found
+      HTTP/1.1 500 Server Error</li>
+    <li><b>Static and Dynamic Requests</b>
+      <br>images usually static, dynamic pages are built on the fly, e.g., most web apps.</li>
+    <li><b>URL escaping / CGI escaping:</b> replaces unwanted characters (e.g., code) with code-safe escaped characters or removes them entirely</li>
+  </ul>
+  <h3> Templates, Strings, Lists, and Dictionaries </h3>
+  <p> Strings are immutable, while lists and dictionaries are mutable. GET and POST parameters are included in the URL.  GET parameters are used to fetch documents, while POST params change data on the server.   GET parameters are affected by the URL length, while POST params have no max length.  GET params may be cached, while POST params almost never are.  GETs should never change the server, while POSTS should. Tip: don't use GET requests to alter any data no server, as plugins can hit get links, unintentionally altering data and causing UI/UX problems.</p>
+  <p> Validation is the process of verifying on the server side what we've received is what we expected.  This is important for security and UX.
+  <ul>
+    <li>open dev_appserver from command line with dev_appserver.py</li>
+    <li><b>l</b>i<b>s</b>t the five most recent files and directories with <b>ls</b> -t | head</li>
+    <li>always autoescape variables when possible using jinja or other templates</li>
+    <li>minimize code repetition and code in templates by keeping code in code, html in html, etc.</li>
+    <li><b>template inheritance:</b> keep headers and footers using curlybraces-block notation.  Blocks are shared between templates.  Then use <b>extends</b>.
+    <li>templates allow for separation of different types of code and increase readability, security, and modifiability.  www.jinja.pocoo.org
+  </ul>
+  <h3> Misc </h3>
+  <ul>
+    <li><b>lsof:</b> LiSt Open Files, unix-like command
+      <br>lsof -i :8080 lists open IP files (-i) on port (:) 8080 along with their Process ID (PID).</li>
+    <li><b>kill -9 72971</b> kills process whose process id (PID) is 72971</li>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

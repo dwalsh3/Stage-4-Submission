@@ -1,0 +1,25 @@
+application: yellowstripes-1149
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: myicon.png
+  upload: myicon.png
+- url: /style\.css
+  static_files: style.css
+  upload: style\.css
+- url: /images
+  static_dir: static_files/images
+  #So if your image file is stored at static_files/images/picture.jpg use this:
+  #<img src="/images/picture.jpg" />
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
