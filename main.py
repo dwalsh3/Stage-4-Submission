@@ -14,7 +14,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(
-    loader = jinja2.FileSystemLoader(template_dir), autoescape = False)
+    loader = jinja2.FileSystemLoader(template_dir), autoescape = True, extensions=['jinja2.ext.autoescape'])
 
 
 DEFAULT_WALL = 'Public'
@@ -69,16 +69,11 @@ class MainPage(Handler):
         posts =  posts_query.fetch()
         # [END query]
 
-        # Create our posts html
-        posts_html = ''
-        for post in posts:
-            posts_html += '<blockquote class=ind_responses>' + cgi.escape(post.content) + '</blockquote>\n'
-        
         # Write Out Page here
         self.render('/comments.html',
-            formatted_posts = posts_html,
-            wall            = urllib.urlencode({'wall_name': wall_name}), 
-            error           = PostWall.error)
+            posts = posts,
+            wall  = urllib.urlencode({'wall_name': wall_name}), 
+            error = PostWall.error)
         PostWall.error = ''
  
 
@@ -105,7 +100,7 @@ class PostWall(Handler):
             # Write to the Google Database
             post.put()
 
-        self.redirect('/?wall_name=' + wall_name)
+        self.redirect('/#comments')
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),

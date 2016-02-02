@@ -1,4 +1,4 @@
-<div class="lessons-etc">
+<div class="lessons-etc" id="comments">
     <br>
     <br>
     <p>
@@ -10,8 +10,8 @@
     </p>
     <form action="/sign?"{{wall}} method="post">
         <div>
-            <textarea name="content" rows="3" cols="60"></textarea>
-            <br>
+			<textarea name="content" rows="3" cols="60" {% if error %} style="border-color:red" {% endif %} ></textarea>
+			<br>
         </div>
         <div style="color: red">{{error}}</div>
         <div>
@@ -24,6 +24,15 @@
     </form>
     <!-- user comments start here -->
     <div class=responses>
-        {{formatted_posts}}
+        <!-- {{formatted_posts}} -->
+
+        {% for post in posts %}
+            <blockquote class=ind_responses>
+            {% autoescape true %}
+				{{post.content}} <!-- cgi.escape(post.content) -->
+            {% endautoescape %}
+            </blockquote>
+        {% endfor %}
+        
     </div>
 </div>

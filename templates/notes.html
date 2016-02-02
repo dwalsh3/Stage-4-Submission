@@ -334,8 +334,35 @@
     <li>always autoescape variables when possible using jinja or other templates</li>
     <li>minimize code repetition and code in templates by keeping code in code, html in html, etc.</li>
     <li><b>template inheritance:</b> keep headers and footers using curlybraces-block notation.  Blocks are shared between templates.  Then use <b>extends</b>.
-    <li>templates allow for separation of different types of code and increase readability, security, and modifiability.  www.jinja.pocoo.org
+    <li>templates allow for separation of different types of code and increase readability, security, and modifiability.  <a href="www.jinja.pocoo.org">www.jinja.pocoo.org</a>
   </ul>
+
+  <h3> HTML Templating to avoid repetition </h3>
+  <p> HTML templating engines like Jinja help avoid repetition in multiple ways, including allowing page headers and footers to be defined once and used across an entire site.  This site usese Jinja in this way even though at the time of this writing, it's only one page.  If I add an 'about' page in the future, it will be as easy as extending the base html with 
+  { % include "about.html" % } instead of the current { % include "notes.html" % }.</p>
+  <br>
+  <p> Jinja also allows code to be written insde html files, which came in handy when building the commens section of this site.  Rather than building the html for the individual comments using string substitution or string construction, I was able to keep the html within my comments html file, with the addtion of a jinja for loop:
+  <div class=highlight>
+  <pre>
+  { % for post in posts % }
+      &ltblockquote class=ind_responses&gt
+        { % autoescape true % }
+            { { post.content } } <!-- cgi.escape(post.content) -->
+        { % endautoescape % }
+      &lt/blockquote&gt
+  { % endfor % }
+  </pre>
+  </div>
+
+  <h3> Input Validation: Security and UX </h3>
+
+  <p> User input that is not validated can lead to two problems: an unhappy user, and an insecure website.  Users who make a mistake entering their email address should be told that they have made a mistake, otherwise there may be no way of contacting them.  Similarly, in the comments section of this site, empty comment are no allowed.  Users who mistakenly hit 'submit' before typing anything or who intentionally leave a blank comment are instead redirected to the input text area, whose outline changed to red. An error message accompanies appears below the box to prompt the user to enter something before hitting 'submit'.</p>
+  <br>
+  <p> Input validation is also important for security.  A malicious user on an unsecure website can implement a cross-site scripting (XSS) attack, stealing private information like email addresses, passwords, and credit card numbers stored on the site's servers.  By escaping user input, attempts at injecting code are instead rendered harmlessly as text.</p>
+
+  </p>
+
+
   <h3> Misc </h3>
   <ul>
     <li><b>lsof:</b> LiSt Open Files, unix-like command

@@ -24,6 +24,9 @@ a:link, a:visited {
 
 textarea {
   width: 100%;
+  border: 1px solid;
+  border-color: initial;
+  
 }
 
 .banner-image {
